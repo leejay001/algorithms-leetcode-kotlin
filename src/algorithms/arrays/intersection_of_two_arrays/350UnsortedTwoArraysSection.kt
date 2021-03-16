@@ -70,7 +70,7 @@ fun main() {
 
 }
 
-fun intersect(nums1: IntArray, num2: IntArray): List<Int> {
+private fun intersect(nums1: IntArray, num2: IntArray): List<Int> {
     val tempMap = HashMap<Int, Int?>()
     nums1.forEach {
         tempMap[it] = tempMap[it]?.plus(1) ?: 1
