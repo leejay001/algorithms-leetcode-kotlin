@@ -23,7 +23,8 @@ s[i] is a printable ascii character.
 
 Follow up: Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 
-链接：https://leetcode-cn.com/problems/reverse-string
+link：https://leetcode-cn.com/problems/reverse-string
+same types:  https://labuladong.gitbook.io/algo/shu-ju-jie-gou-xi-lie/2.5-shou-ba-shou-shua-shu-zu-ti-mu/shuang-zhi-zhen-ji-qiao
 
  */
 fun main() {
