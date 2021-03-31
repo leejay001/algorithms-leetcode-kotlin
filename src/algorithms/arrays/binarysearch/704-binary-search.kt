@@ -43,6 +43,13 @@ if(nums[mid] > target){
  */
 fun main() {
 
+    val nums = intArrayOf(1,2,2,2,2,2,2)
+    val target = 2
+
+    binarySearch(nums, target).run {
+        println(this)
+    }
+
 }
 
 fun binarySearch(nums: IntArray, target: Int): Int {
@@ -71,3 +78,9 @@ fun binarySearch(nums: IntArray, target: Int): Int {
 // 3. 相等则 return mid
 // 4. 小于，则证明中间的数都比target小，那么只好从右边开始找，那么left = mid +1, mid已经被搜索过，无需left = mid ，直接搜索未搜过的区间
 // 5. 大于 ，则证明中间的数都比 target大，那么只好在左边碰碰运气，right = mid -1
+
+/***********************************局限性********************/
+//比如说给你有序数组 nums = [1,2,2,2,3]，target = 2，此算法返回的索引是 2，没错。
+// 但是如果我想得到 target 的左侧边界，即索引 1，或者我想得到 target 的右侧边界，即索引 3，这样的话此算法是无法处理的。
+// 也就是说，这样的target 可能只有一个可能有多个，如何找到它的左右边界呢？
+// 找到这两个左右边界，又在什么样的场景下应用呢
